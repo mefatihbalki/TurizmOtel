@@ -121,7 +121,7 @@ public class EmployeeGUI extends Layout {
 
         // rezervayon bilgilerinin güncellenmesi
         JPopupMenu tbl_rezervations_popup = new JPopupMenu();
-        tbl_rezervations_popup.add("Update").addActionListener(e -> {
+        tbl_rezervations_popup.add("Güncelle").addActionListener(e -> {
             // Take choose of user's reservation col index
             int selectedRow = tbl_rezervations.getSelectedRow();
             if (selectedRow != -1) {
@@ -140,12 +140,12 @@ public class EmployeeGUI extends Layout {
                 if (employeeManager.updateReservation(reservationID, customerName, customerTc, customerPhone, customerEmail, childNumber, adultNumber)) {
                     // If update procesess is succesfull, it update list of reservation
                     loadRezervationList();
-                    Helper.showMsg("Başarılı","Reservation updated successfully.");
+                    Helper.showMsg("Başarılı","Güncelleme Başarılı");
                 } else {
-                    Helper.showMsg("Hata","Error occurred while updating reservation.");
+                    Helper.showMsg("Hata","Güncelleme Yaparken Bir hata Oldu");
                 }
             } else {
-                Helper.showMsg("Info","Please select a row to update.");
+                Helper.showMsg("Info","Lütfen Satır Seçiniz");
             }
         });
 

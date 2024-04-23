@@ -55,8 +55,9 @@ public class AdminGUI extends Layout {
 
         JPopupMenu tbl_personel_popup = new JPopupMenu();
         tbl_personel_popup.add("Güncelle").addActionListener(e ->{
+            System.out.println(tbl_personel.getValueAt(tbl_personel.getSelectedRow(),6).toString());
             if(adminManager.updateUser(
-                    // id sine göre kullanıcı seçilir
+                    // Kullanıcı bilgileri seçilip satır içerisinde düzenleyip mouse ile güncelle diyerek kullanılan alan
 
                     Integer.parseInt(tbl_personel.getValueAt(tbl_personel.getSelectedRow(),0).toString()),
                     tbl_personel.getValueAt(tbl_personel.getSelectedRow(),1).toString(),
@@ -64,7 +65,8 @@ public class AdminGUI extends Layout {
                     tbl_personel.getValueAt(tbl_personel.getSelectedRow(),3).toString(),
                     tbl_personel.getValueAt(tbl_personel.getSelectedRow(),4).toString(),
                     tbl_personel.getValueAt(tbl_personel.getSelectedRow(),5).toString(),
-                    cmb_userType.getSelectedItem().toString()
+                    tbl_personel.getValueAt(tbl_personel.getSelectedRow(),6).toString()
+
             )){
                 loadPersonelTable();
                 Helper.showMsg("Başarılı","Kullanıcı Güncellendi");
