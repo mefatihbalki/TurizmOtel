@@ -27,7 +27,7 @@ public class AdminGUI extends Layout {
     public AdminGUI(User admin){
         this.admin = admin;
         add(wrapper);
-        guiInitialize(800,500);
+        guiInitialize(800,700);
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
@@ -55,7 +55,7 @@ public class AdminGUI extends Layout {
 
         JPopupMenu tbl_personel_popup = new JPopupMenu();
         tbl_personel_popup.add("Güncelle").addActionListener(e ->{
-            System.out.println(tbl_personel.getValueAt(tbl_personel.getSelectedRow(),6).toString());
+            //System.out.println(tbl_personel.getValueAt(tbl_personel.getSelectedRow(),6).toString());
             if(adminManager.updateUser(
                     // Kullanıcı bilgileri seçilip satır içerisinde düzenleyip mouse ile güncelle diyerek kullanılan alan
 

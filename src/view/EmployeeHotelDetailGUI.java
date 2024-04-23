@@ -49,6 +49,7 @@ public class EmployeeHotelDetailGUI extends Layout {
 
         // Sezon tablo oluşturma
         mdl_season = new DefaultTableModel();
+
         // tablonun sütun isimleri
         mdl_season.setColumnIdentifiers(new Object[]{"ID","Sezon","Başlangıç Tarihi","Bitiş Tarihi"});
         row_season = new Object[4];
@@ -84,16 +85,19 @@ public class EmployeeHotelDetailGUI extends Layout {
             }
         });
         JPopupMenu tbl_pension_popup = new JPopupMenu();
+
         // Pansiyon silme
-        tbl_pension_popup.add("Delete").addActionListener(e ->{
-            if(detailManager.deleteHotelPension(Integer.parseInt(tbl_pension.getValueAt(tbl_pension.getSelectedRow(),0).toString()))){
+        tbl_pension_popup.add("Sil").addActionListener(e -> {
+            if (detailManager.deleteHotelPension(Integer.parseInt(tbl_pension.getValueAt(tbl_pension.getSelectedRow(), 0).toString()))) {
                 loadPensionList();
-                Helper.showMsg("Başarılı","Pansiyon Silindi");
-            }else{
-                Helper.showMsg("Uyarı","Pansiyon silerken hata oluştu !");}
+                Helper.showMsg("done","Pansiyon Silindi");
+            } else {
+                Helper.showMsg("error","İşlem Sırasında Hata Oluştu");
+            }
         });
         tbl_pension.setComponentPopupMenu(tbl_pension_popup);
         loadPensionList();
+
         // tablo da yapılan işlemleri görmek için loadPensionList() metodu çağrılır
 
         // otel özelliklerinin listelendiği tabloyu oluşturma
@@ -108,6 +112,7 @@ public class EmployeeHotelDetailGUI extends Layout {
             }
         });
         JPopupMenu tbl_hotelFeature_popup = new JPopupMenu();
+
         // Otel özelliği silme
         tbl_hotelFeature_popup.add("Sil").addActionListener(e ->{
             if(detailManager.deleteHotelFeature(hotel.getHotelID(),
@@ -119,6 +124,7 @@ public class EmployeeHotelDetailGUI extends Layout {
         });
         tbl_hotel_feature.setComponentPopupMenu(tbl_hotelFeature_popup);
         loadHotelFeatureList();
+
         // tabloda yapılan değişiklikleri görmek için  loadHotelFeatureList() metodu çağrılır
 
         // odanın listeleneceği tabloyu oluşturma
@@ -192,6 +198,7 @@ public class EmployeeHotelDetailGUI extends Layout {
                 }
             }
         });
+
         // Otellere pansiyon eklenmesi
         btn_addPensiontoHotel.addActionListener(e -> {
             if(Helper.confirm("sure")){
@@ -205,6 +212,8 @@ public class EmployeeHotelDetailGUI extends Layout {
                 Helper.showMsg("Başarılı","Ekleme işlemi gerçekleşti");
             }
         });
+
+
         // Otellere özellik eklenmesi
         btn_addHotelFeature.addActionListener(e -> {
             if(Helper.confirm("sure")){
