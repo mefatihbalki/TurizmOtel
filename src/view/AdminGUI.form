@@ -58,7 +58,9 @@
                     <children>
                       <component id="30c70" class="javax.swing.JLabel">
                         <constraints>
-                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <preferred-size width="166" height="17"/>
+                          </grid>
                         </constraints>
                         <properties>
                           <font style="1"/>
@@ -67,20 +69,24 @@
                       </component>
                       <vspacer id="8a542">
                         <constraints>
-                          <grid row="13" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                          <grid row="13" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                            <preferred-size width="166" height="14"/>
+                          </grid>
                         </constraints>
                       </vspacer>
                       <component id="e0431" class="javax.swing.JTextField" binding="fld_tcNo">
                         <constraints>
                           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                            <preferred-size width="150" height="-1"/>
+                            <preferred-size width="166" height="30"/>
                           </grid>
                         </constraints>
                         <properties/>
                       </component>
                       <component id="f88bd" class="javax.swing.JLabel">
                         <constraints>
-                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <preferred-size width="166" height="17"/>
+                          </grid>
                         </constraints>
                         <properties>
                           <font style="1"/>
@@ -90,14 +96,16 @@
                       <component id="681a4" class="javax.swing.JTextField" binding="fld_userName">
                         <constraints>
                           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                            <preferred-size width="150" height="-1"/>
+                            <preferred-size width="166" height="30"/>
                           </grid>
                         </constraints>
                         <properties/>
                       </component>
                       <component id="cd4a8" class="javax.swing.JLabel">
                         <constraints>
-                          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <preferred-size width="166" height="17"/>
+                          </grid>
                         </constraints>
                         <properties>
                           <font style="1"/>
@@ -107,14 +115,16 @@
                       <component id="26305" class="javax.swing.JTextField" binding="fld_name">
                         <constraints>
                           <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                            <preferred-size width="150" height="-1"/>
+                            <preferred-size width="166" height="30"/>
                           </grid>
                         </constraints>
                         <properties/>
                       </component>
                       <component id="13971" class="javax.swing.JLabel">
                         <constraints>
-                          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <preferred-size width="166" height="17"/>
+                          </grid>
                         </constraints>
                         <properties>
                           <font style="1"/>
@@ -124,14 +134,16 @@
                       <component id="51eb5" class="javax.swing.JTextField" binding="fld_surname">
                         <constraints>
                           <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                            <preferred-size width="150" height="-1"/>
+                            <preferred-size width="166" height="30"/>
                           </grid>
                         </constraints>
                         <properties/>
                       </component>
                       <component id="6d79b" class="javax.swing.JComboBox" binding="cmb_userType">
                         <constraints>
-                          <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                          <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <preferred-size width="166" height="30"/>
+                          </grid>
                         </constraints>
                         <properties>
                           <model>
@@ -142,7 +154,9 @@
                       </component>
                       <component id="dae9e" class="javax.swing.JLabel">
                         <constraints>
-                          <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                          <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <preferred-size width="166" height="17"/>
+                          </grid>
                         </constraints>
                         <properties>
                           <font style="1"/>
@@ -151,7 +165,9 @@
                       </component>
                       <component id="518b9" class="javax.swing.JButton" binding="btn_addUser">
                         <constraints>
-                          <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                          <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                            <preferred-size width="166" height="30"/>
+                          </grid>
                         </constraints>
                         <properties>
                           <font style="1"/>
@@ -160,7 +176,9 @@
                       </component>
                       <component id="43707" class="javax.swing.JLabel">
                         <constraints>
-                          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <preferred-size width="166" height="17"/>
+                          </grid>
                         </constraints>
                         <properties>
                           <font style="1"/>
@@ -170,7 +188,7 @@
                       <component id="830bf" class="javax.swing.JTextField" binding="fld_password">
                         <constraints>
                           <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                            <preferred-size width="150" height="-1"/>
+                            <preferred-size width="166" height="30"/>
                           </grid>
                         </constraints>
                         <properties>

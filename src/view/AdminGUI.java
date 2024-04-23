@@ -8,7 +8,7 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.*;
 
-// Admin ile ilgili operasyonların gerçekleşeceği class
+// Admin ile ilgili bileşenlerin olduğu class
 public class AdminGUI extends Layout {
     private AdminManager adminManager = new AdminManager();
     private JPanel wrapper;
@@ -42,6 +42,7 @@ public class AdminGUI extends Layout {
         tbl_personel.setModel(mdl_personel);
 
         // mouse listener
+
         tbl_personel.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
@@ -49,11 +50,14 @@ public class AdminGUI extends Layout {
             }
         });
         loadPersonelTable();
-        // personel listesi için oluşturulan JpopupMenü
+
+        // personel listesi için oluşturulan Menü
+
         JPopupMenu tbl_personel_popup = new JPopupMenu();
         tbl_personel_popup.add("Güncelle").addActionListener(e ->{
             if(adminManager.updateUser(
                     // id sine göre kullanıcı seçilir
+
                     Integer.parseInt(tbl_personel.getValueAt(tbl_personel.getSelectedRow(),0).toString()),
                     tbl_personel.getValueAt(tbl_personel.getSelectedRow(),1).toString(),
                     tbl_personel.getValueAt(tbl_personel.getSelectedRow(),2).toString(),
@@ -97,7 +101,7 @@ public class AdminGUI extends Layout {
             }
         });
     }
-    //  loadPersonelTable metodu Db de ki personel tablosunu kullanıcının göreceği formata dönüştürüyor
+    //  loadPersonelTable metodu Db de ki personel tablosunu kullanıcının göreceği format ile geliyor
     private void loadPersonelTable(){
         DefaultTableModel db = (DefaultTableModel) tbl_personel.getModel();
         db.setRowCount(0);

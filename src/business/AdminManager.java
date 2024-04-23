@@ -27,12 +27,13 @@ public class AdminManager {
     }
     // kullanıcı bilgileri güncelleme
     public boolean updateUser(int userID, String tcNo, String username, String password, String name, String surname, String userType) {
-        try{
+        try {
             return adminDao.updateUser(userID, tcNo, username, password, name, surname, userType);
-        }catch (Exception e){
+        } catch (Exception e) {
+            // Log the exception or print a detailed error message
             e.printStackTrace();
+            return false;
         }
-        return false;
     }
 
     // kullanıcı silme
