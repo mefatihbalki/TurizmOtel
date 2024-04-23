@@ -108,7 +108,7 @@ public class EmployeeHotelDetailGUI extends Layout {
             }
         });
         JPopupMenu tbl_hotelFeature_popup = new JPopupMenu();
-        // Otel özelliğ silme
+        // Otel özelliği silme
         tbl_hotelFeature_popup.add("Sil").addActionListener(e ->{
             if(detailManager.deleteHotelFeature(hotel.getHotelID(),
                     tbl_hotel_feature.getValueAt(tbl_hotel_feature.getSelectedRow(),0).toString())){
@@ -135,6 +135,7 @@ public class EmployeeHotelDetailGUI extends Layout {
             }
         });
         tbl_room_popup = new JPopupMenu();
+
         // Oda özelliği ekleme
         tbl_room_popup.add("Oda özelliği ekle").addActionListener(e -> {
             int id = Integer.parseInt(tbl_room.getValueAt(tbl_room.getSelectedRow(),0).toString());
@@ -142,6 +143,7 @@ public class EmployeeHotelDetailGUI extends Layout {
         });
 
         // Oda bilgisi güncelleme
+
         tbl_room_popup.add("Güncelle").addActionListener(e -> {
             if(tbl_room.getCellEditor() != null){
                 tbl_room.getCellEditor().stopCellEditing();
@@ -159,7 +161,9 @@ public class EmployeeHotelDetailGUI extends Layout {
                 }
             }
         });
+
         // Oda Silme
+
         tbl_room_popup.add("Sil").addActionListener(e -> {
             if(detailManager.deleteRoom((int)tbl_room.getValueAt(tbl_room.getSelectedRow(),0))){
                 loadHotelRoomList();
@@ -320,7 +324,9 @@ public class EmployeeHotelDetailGUI extends Layout {
         }
     }
     public static boolean isNumeric(String maybeNumeric) {
+
         // regex kullanıldı, girilen değerin uygun aralıkta olması için
+
         return maybeNumeric != null && maybeNumeric.matches("[0-9]+");
     }
 }

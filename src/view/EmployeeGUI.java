@@ -118,28 +118,39 @@ public class EmployeeGUI extends Layout {
                 tbl_rezervations.setRowSelectionInterval(tbl_rezervations.rowAtPoint(e.getPoint()), tbl_rezervations.rowAtPoint(e.getPoint()));
             }
         });
+
         // rezervayon bilgilerinin güncellenmesi
         JPopupMenu tbl_rezervations_popup = new JPopupMenu();
-        tbl_rezervations_popup.add("Güncelle").addActionListener(e -> {
-            int adult_number = Integer.parseInt((String)cmb_adultNumber.getSelectedItem());
-            int child_number = Integer.parseInt((String)cmb_childNumber.getSelectedItem());
-            int child_price = Integer.parseInt(tbl_search.getValueAt(tbl_search.getSelectedRow(),14).toString());
-            int adult_price = Integer.parseInt(tbl_search.getValueAt(tbl_search.getSelectedRow(),15).toString());
-            System.out.println(adult_number+", "+child_number+", "+ adult_price + ", "+ child_price);
-            tbl_rezervations.getCellEditor().stopCellEditing();
-            if (employeeManager.updateReservation(
-                    Integer.parseInt(tbl_rezervations.getValueAt(tbl_rezervations.getSelectedRow(), 0).toString()),
-                    (String) tbl_rezervations.getValueAt(tbl_rezervations.getSelectedRow(), 4),
-                    (String) tbl_rezervations.getValueAt(tbl_rezervations.getSelectedRow(), 5),
-                    (String) tbl_rezervations.getValueAt(tbl_rezervations.getSelectedRow(), 6),
-                    (String) tbl_rezervations.getValueAt(tbl_rezervations.getSelectedRow(), 7),
-                    Integer.parseInt(tbl_rezervations.getValueAt(tbl_rezervations.getSelectedRow(), 8).toString()),
-                    Integer.parseInt(tbl_rezervations.getValueAt(tbl_rezervations.getSelectedRow(), 9).toString())
-            )) {
-                loadRezervationList();
-                Helper.showMsg("Başarılı", "İşlem Güncellendi");
+        tbl_rezervations_popup.add("Update").addActionListener(e -> {
+            // Take choose of user's reservation col index
+            int selectedRow = tbl_rezervations.getSelectedRow();
+            if (selectedRow != -1) {
+                // Take user's reservation index
+                int reservationID = Integer.parseInt(tbl_rezervations.getValueAt(selectedRow, 0).toString());
+
+                // Take data from users
+                String customerName = (String) tbl_rezervations.getValueAt(selectedRow, 4);
+                String customerTc = (String) tbl_rezervations.getValueAt(selectedRow, 5);
+                String customerPhone = (String) tbl_rezervations.getValueAt(selectedRow, 6);
+                String customerEmail = (String) tbl_rezervations.getValueAt(selectedRow, 7);
+                int childNumber = Integer.parseInt(tbl_rezervations.getValueAt(selectedRow, 8).toString());
+                int adultNumber = Integer.parseInt(tbl_rezervations.getValueAt(selectedRow, 9).toString());
+
+                // Call update
+                if (employeeManager.updateReservation(reservationID, customerName, customerTc, customerPhone, customerEmail, childNumber, adultNumber)) {
+                    // If update procesess is succesfull, it update list of reservation
+                    loadRezervationList();
+                    Helper.showMsg("Başarılı","Reservation updated successfully.");
+                } else {
+                    Helper.showMsg("Hata","Error occurred while updating reservation.");
+                }
+            } else {
+                Helper.showMsg("Info","Please select a row to update.");
             }
         });
+
+        //silme işleminin yapıldığı yer
+
         tbl_rezervations_popup.add("Sil").addActionListener(e -> {
             if (employeeManager.deleteReservation(Integer.parseInt(tbl_rezervations.getValueAt(tbl_rezervations.getSelectedRow(), 0).toString()))) {
                 employeeManager.increaseStock(Integer.parseInt(tbl_rezervations.getValueAt(tbl_rezervations.getSelectedRow(), 3).toString()));
