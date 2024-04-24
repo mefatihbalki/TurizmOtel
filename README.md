@@ -14,7 +14,7 @@ Proje Yapısı src dizini altında Java kaynak kodları bulunmaktadır.
 
 *Views: Kullanıcı arayüzünü oluşturan Swing GUI sınıfları 
 
-*Core: dizini altında veritabanı oluşturma dosyası, bulunmaktadır. Kullanıcı Roller ve Yetkileri
+*Core: Dizinin altında veritabanı oluşturma dosyası bulunmaktadır.
 
 - Admin: Acente çalışanı ekleme, silme, güncelleme
 
