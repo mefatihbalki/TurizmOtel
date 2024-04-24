@@ -21,4 +21,4 @@ Proje Yapısı src dizini altında Java kaynak kodları bulunmaktadır.
 - Acente Çalışanı (Personel) : Otel ekleme - Listeleme, Oda ekleme - Listeleme, Sezon ekleme - Listeleme, Fiyat yönetimi, Oda Arama ve Rezervasyon yapma ve Güncelleme.
 
 Proje çalışma şekli ve işlemlerin kullanılabilirliği üzerine kısa bir kullanış videosu.
-[https://www.loom.com/share/4045c6486dbb4a138fc3adacb68b5016?sid=ddcd8a2f-a1da-4483-8573-438d49e9a655](https://www.youtube.com/watch?v=zjVaj5-O3k0)
+(https://www.youtube.com/watch?v=zjVaj5-O3k0)
